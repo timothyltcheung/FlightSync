@@ -14,5 +14,6 @@ To use this web app, an API key from Skyscanner is necessary (can be found from 
 Once obtained, set up an environment variable shown below in order to run the app
 
 SKYSCANNER_HOST= 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com'
+
 SKYSCANNER_API_KEY = 'Your Key Here'
 
