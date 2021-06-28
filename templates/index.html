@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+
+{% block javascript %}
+<script type = "text/javascript">
+  {% include "index.js" %}
+</script>
+{% endblock %}
+
+{% block heading %}
+FlightSync
+{% endblock %}
+
+{% block body %}
+  <div id = "find_places">
+    <form id = "places_form" method = "GET" onsubmit = "return false;">
+      <input type ="text" name = "place" id = "place" value ="NYC">
+      <button id = "place_submit"> Find Place ID </button>
+    </form>
+  </div>
+  <br>
+  <table id = place_ids>
+  </table>
+  <br>
+
+  <div id = "find_routes">
+    <form id = "routes_form" method = "GET" onsubmit = "return false;">
+      <input type = "text" name = "country1" id = "country1" value="US">
+      <input type = "text" name = "currency1" id = "currency1" value="USD">
+      <input type = "text" name= "locale1" id = "locale1" value="en-US">
+      <input type = "text" name= "originPlace1" id = "originPlace1" value="JFK-sky">
+      <input type = "text" name= "destinationPlace1" id = "destinationPlace1" value="LAXA-sky">
+      <input type = "text" name= "outboundPartialDate1" id = "outboundPartialDate1" value="2021-08-01">
+      <input type = "text" name = "inboundPartialDate1" id = "inboundPartialDate1" value="2021-08-13">      
+    </form>
+  </div>
+  <br>
+  <button id = "add_flight" >Add more flights</button>
+  <button id = "routes_submit"> Find Routes </button>
+  <table id = routes>
+  </table>
+  <br>
+{% endblock %}
